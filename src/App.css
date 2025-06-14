@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form {
+  background-color: rgba(10, 10, 10, 0.152);
+  width: 60%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.238);
+}
+
+.form button {
+  background-color: rgba(10, 10, 212, 0.886);
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  color: white;
+  border-radius: 4px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.238);
+}
+label {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin: 0;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.238);
+}
+
+.input_container {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.navbar {
+  display: flex;
+  gap: 40px;
+  max-width: 768px;
+  margin: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.179);
+  padding: 20px;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+}
