@@ -9,7 +9,6 @@ import { setLocalStorage } from '../../Functions.js/localStroage';
 
 export default function TrashList() {
 
-    const [TrashLists, setTrashLists] = useState([])
 
     const notez = useSelector((state) => state.NoteSlice.notes);
 
@@ -34,10 +33,6 @@ export default function TrashList() {
         dispatch(addNotes(updatedData));
     }
 
-    useEffect(() => {
-        setTrashLists(trashLists)
-    }, [notez])
-    console.log(TrashLists)
 
 
     return (
