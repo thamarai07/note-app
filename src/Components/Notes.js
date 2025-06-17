@@ -1,8 +1,9 @@
 import React from "react";
-import Form from "./Form";
+// import Form from "./Notes/NotesForm";
+import Form from "./Notes/NotesForm";
 export default function Notes() {
   return (
-    <div>
+    <div className="container">
       <Form />
     </div>
   );
