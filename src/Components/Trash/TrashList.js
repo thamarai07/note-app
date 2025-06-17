@@ -9,6 +9,7 @@ import { setLocalStorage } from '../../Functions.js/localStroage';
 
 export default function TrashList() {
 
+    const [TrashLists, setTrashLists] = useState([])
 
     const notez = useSelector((state) => state.NoteSlice.notes);
 
@@ -33,6 +34,9 @@ export default function TrashList() {
         dispatch(addNotes(updatedData));
     }
 
+    useEffect(() => {
+        setTrashLists(trashLists)
+    }, [notez])
 
 
     return (
@@ -72,7 +76,7 @@ export default function TrashList() {
                                 textAlign: "center",
                             }}
                         >
-                            Trash is empty
+                            Trash
                         </p>
                     )}
             </div>
