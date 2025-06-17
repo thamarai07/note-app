@@ -4,7 +4,7 @@ import { RiDeleteBinLine, RiDeviceRecoverLine } from 'react-icons/ri';
 import { useDispatch, useSelector } from 'react-redux';
 import { addNotes, deleteNote } from '../../Features/NoteSlice';
 import { DeleteLocalStorage } from '../../Functions.js/removeItem';
-import { setLocalStorage } from '../../Functions.js/localStorage'; // Fixed typo in import
+import { setLocalStorage } from '../../Functions.js/localStroage';
 
 export default function TrashList() {
   const [trashLists, setTrashLists] = useState(getLocalStorage('notes')?.filter(note => note.trash) || []);
