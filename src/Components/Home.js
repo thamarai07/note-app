@@ -70,8 +70,8 @@ export default function Home() {
           <h3 >🙌 Author</h3>
           <p >
             Made with 💙 by <strong>Thamarai Kannan B</strong> <br />
-            <a href="https://github.com/thamarai07/" target="_blank" class="text-indigo-500 underline">GitHub</a> |
-            <a href="https://www.linkedin.com/in/thamarai-kannan-2181881a0/" target="_blank" class="text-indigo-500 underline">LinkedIn</a>
+            <a href="https://github.com/thamarai07/" class="text-indigo-500 underline">GitHub</a> |
+            <a href="https://www.linkedin.com/in/thamarai-kannan-2181881a0/"  class="text-indigo-500 underline">LinkedIn</a>
           </p>
         </section>
 
