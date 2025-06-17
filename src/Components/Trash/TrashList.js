@@ -9,7 +9,7 @@ import { setLocalStorage } from '../../Functions.js/localStroage';
 
 export default function TrashList() {
 
-    const [TrashLists, setTrashLists] = useState([])
+    const [TrashListsss , setTrashLists] = useState([])
 
     const notez = useSelector((state) => state.NoteSlice.notes);
 
