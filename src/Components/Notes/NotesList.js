@@ -6,7 +6,6 @@ import { getLocalStorage } from '../../Functions.js/getLocalStorage';
 import { setLocalStorage } from '../../Functions.js/localStroage';
 import { addNotes } from '../../Features/NoteSlice';
 import { useDispatch } from 'react-redux';
-import { GrFormView } from "react-icons/gr";
 import Modal from '../Model';
 
 export default function NotesList({ values }) {
