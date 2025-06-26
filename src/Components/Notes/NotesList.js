@@ -49,7 +49,6 @@ export default function NotesList({ values }) {
             ) : (
               <MdOutlinePushPin style={{ cursor: "pointer" }} onClick={handleTogglePin} />
             )}
-            <GrFormView style={{ cursor: "pointer" }} />
           </div>
         </div>
         <hr />
@@ -63,6 +62,7 @@ export default function NotesList({ values }) {
         isOpen={isModalOpen}
         onClose={closeModal}
         title={title}
+        id={id}
       >
         {description}
       </Modal>

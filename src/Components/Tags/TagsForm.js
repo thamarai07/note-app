@@ -32,12 +32,12 @@ export default function TagsForm() {
     <div className="container">
       <form className="form">
         <div className="input_container">
-          <label>Tags</label>
-          <br />
+          <label className="mb-1 label">Tags</label>
           <input
             className="input"
             onChange={(e) => setValue(e.target.value)}
             value={value}
+            placeholder="Create New Tag"
           />
         </div>
         <button onClick={handleAddTags}>Submit</button>

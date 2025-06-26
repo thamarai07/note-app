@@ -81,27 +81,27 @@ export default function Form() {
     <div>
       <form className="form" onSubmit={handleSubmit}>
         <div className="input_container">
-          <label>Title</label>
-          <br />
+          <label className="mb-1 label">Title</label>
           <input
             name="title"
             className="input"
             value={note.title}
             onChange={handleChange}
+            placeholder="Enter title"
           />
         </div>
         <div className="input_container">
-          <label>Description</label>
-          <br />
+          <label className="mb-1 label">Description</label>
           <textarea
             name="description"
             className="input"
             value={note.description}
             onChange={handleChange}
+            placeholder="Enter Description"
           />
         </div>
         <div className="input_container">
-          <label>Tags</label>
+          <label className="mb-1 label">Tags</label>
           <select
             name="tag"
             className="input"
@@ -119,7 +119,7 @@ export default function Form() {
         <button type="submit">Submit</button>
       </form>
 
-      <div style={{ display: "flex", flexDirection: "column", marginTop: "20px" }}>
+      <div style={{ display: "flex", flexDirection: "column", marginTop: "20px", paddingBottom: "40px" }}>
         <p style={{
           fontSize: "20px",
           marginBottom: "10px"

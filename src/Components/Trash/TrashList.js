@@ -17,6 +17,8 @@ export default function TrashList() {
   }, [notes]);
 
   const handleDelete = (id) => {
+    const confirmRecover = window.confirm('Do you want to delete this note permanently?');
+    if(!confirmRecover)return;
     DeleteLocalStorage('notes', id);
     dispatch(deleteNote(id));
   };

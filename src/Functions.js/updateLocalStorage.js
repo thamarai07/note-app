@@ -4,6 +4,6 @@ export const UpdateLocalStorageNote = (key, id, updates) => {
       item.id === id ? { ...item, ...updates } : item
     );
     localStorage.setItem(key, JSON.stringify(updated));
-    window.dispatchEvent(new Event("storage")); // Optional: trigger a global update
+    window.dispatchEvent(new Event("storage")); 
   };
   

@@ -139,33 +139,30 @@ label {
   gap: 10px;
 }
 
-/* Overlay styles */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.7); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensure it's on top of other content */
+  z-index: 1000;
 }
 
-/* Modal content styles */
 .modal-content {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  width: 90%; /* Adjust as needed */
-  max-width: 500px; /* Max width for larger screens */
+  width: 90%;
+  max-width: 500px; 
   position: relative;
-  outline: none; /* Remove default focus outline */
+  outline: none; 
 }
 
-/* Header styles */
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -181,7 +178,6 @@ label {
   color: #333;
 }
 
-/* Close button styles */
 .modal-close-button {
   background: none;
   border: none;
@@ -195,7 +191,34 @@ label {
   color: #333;
 }
 
-/* Body styles */
-.modal-body {
-  /* Add any specific styles for your modal content here */
+
+.mb-1{
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.modal-content input,textarea{
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 4px black;
+  border-radius: 6px;
+}
+
+.modal-content .update_btn{
+  background-color: blue;
+  outline: none;
+  border: none;
+  color: white;
+  width: 20%;
+  margin: auto;
+  display: block;
+  margin-top: 15px;
+  padding: 6px 12px;
+  border-radius: 4px;
 }

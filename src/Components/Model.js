@@ -1,6 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import "../App.css"
+import { UpdateLocalStorageNote } from '../Functions.js/updateLocalStorage';
 
-const Modal = ({ isOpen, onClose, children, title }) => {
+const Modal = ({ isOpen, onClose, children, title, id }) => {
+
+  const [from, setform] = useState({
+    title: title,
+    description: children
+  })
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -25,26 +32,33 @@ const Modal = ({ isOpen, onClose, children, title }) => {
     return null;
   }
 
+  const handleUpdate = (id) => {
+    UpdateLocalStorageNote("notes", id, from)
+    onClose();
+  }
+
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div 
-        className="modal-content" 
-        onClick={(e) => e.stopPropagation()} 
+      <div
+        className="modal-content"
+        onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
-        tabIndex="-1" 
+        tabIndex="-1"
         ref={modalRef}
       >
         <div className="modal-header">
-          {title && <h2 id="modal-title">{title}</h2>}
-          <button className="modal-close-button" onClick={onClose} aria-label="Close modal">
+          {title && <input id="modal-title" value={from.title} onChange={(e) => setform({ ...from, title: e.target.value })} />}
+          <span className="modal-close-button" onClick={onClose} aria-label="Close modal">
             &times;
-          </button>
+          </span>
         </div>
         <div className="modal-body">
-          {children}
+          <textarea value={from.description} onChange={(e) => setform({ ...from, description: e.target.value })}>
+          </textarea>
         </div>
+        <button className='update_btn' onClick={() => handleUpdate(id)}>Update</button>
       </div>
     </div>
   );
